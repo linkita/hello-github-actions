@@ -8,6 +8,6 @@ jobs:
       - uses: actions/checkout@v1
       - uses: ./action-a
         with:
-          MY_NAME: "${secrets.FOO}"
+          MY_NAME: ${{ secrets.FOO }}
       - name: "ktlint"
         uses: "vroy/gha-kotlin-linter@v1"
