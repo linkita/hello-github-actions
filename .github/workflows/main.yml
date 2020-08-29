@@ -9,5 +9,8 @@ jobs:
       - uses: ./action-a
         with:
           MY_NAME: ${{ secrets.FOO }}
+      - uses: ./action-b
+        with:
+          FOO: "Mavi"
       - name: "ktlint"
         uses: "vroy/gha-kotlin-linter@v1"
